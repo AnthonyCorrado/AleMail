@@ -1,14 +1,16 @@
+<h4><%= @user.bar_name %></h4>
+<h4><%= @user.username %></h4>
 
-<h2><%= @user.phone %></h2>
-<h2><%= @user.address %></h2>
+<h5><%= @user.phone %></h5>
+<h5><%= @user.address %></h5>
 
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= @user.bar_name %>
-        <%= @user.username %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<h5><% @patrons.each do |p| %>
+			<div class="patron-list">
+				<%= p.first_name %>
+				<%= p.last_name %>
+				<%= p.text_updates %>
+				<%= p.email_updates %>
+				<%= p.phone %>
+				<%= p.email %>
+			</div>
+		<% end %>
