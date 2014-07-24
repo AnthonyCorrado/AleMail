@@ -1,2 +1,12 @@
 <h1>Patrons#index</h1>
 <p>Find me in app/views/patrons/index.html.erb</p>
+
+
+<% @patrons.each do |p| %>
+<%= p.first_name %>
+<%= p.last_name %>
+<%= p.text_updates %>
+<%= p.email_updates %>
+<%= p.phone %>
+<%= p.email %>
+<% end %>
