@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+	before_action :signed_in_user, only: [:edit, :update]
+	before_action :correct_user, only: [:edit, :update]
+
 	def index
 		@users = User.all
 	end
@@ -14,13 +17,25 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to users_path
+			sign_in @user
+			flash[:success] = "Welcome to Ale Mail!"
+			redirect_to @user
 		else
 			render 'edit'
 		end
 	end
 
+	def edit
+	end
 
+	def update
+		if @user.update_attributes(user_params)
+			flash[:success] = "Profile updated"
+			redirect_to @user
+		else
+			render 'edit'
+		end
+	end
 
   private
 
@@ -28,4 +43,17 @@ class UsersController < ApplicationController
 			params.require(:user).permit(:bar_name, :username, :password, :password_confirmation, :phone, :address, :email)
 		end
 
+		# Before filters
+
+		def signed_in_user
+			unless signed_in?
+				store_location
+				redirect_to signin_url, notice: "Please sign in."
+			end
+		end
+
+		def correct_user
+			@user = User.find(params[:id])
+			redirect_to(root_url) unless current_user?(@user)
+		end
 end
