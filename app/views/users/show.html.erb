@@ -4,13 +4,16 @@
 <h5><%= @user.phone %></h5>
 <h5><%= @user.address %></h5>
 
-<h5><% @patrons.each do |p| %>
-			<div class="patron-list">
-				<%= p.first_name %>
-				<%= p.last_name %>
-				<%= p.text_updates %>
-				<%= p.email_updates %>
-				<%= p.phone %>
-				<%= p.email %>
-			</div>
-		<% end %>
+<div class="col-xs-12">
+	<h5><% @patrons.each do |p| %>
+				<div class="patron-list">
+					<%= p.first_name %>
+					<%= p.last_name %>
+					<%= p.text_updates %>
+					<%= p.email_updates %>
+					<%= p.phone %>
+					<%= p.email %>
+				</div>
+				<button name="button" class="btn btn-default btn-responsive">Default</button>
+			<% end %>
+</div>

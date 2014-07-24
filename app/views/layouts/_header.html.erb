@@ -1,26 +1,25 @@
 <div class="fluid-container">
-  <h1><a href="#">Ale Mail</a></h1>
+  <h1><a href="#"></a></h1>
   <div class="navbar">
     <div class="navbar-inner">
   <%= link_to image_tag('/assets/home.svg', :class => "home-img"), user_path %>
       <% if signed_in? %>
-
-        <ul class="nav nav-pills pull-right">
-          <li class="dropdown">
-            <a class="col-xs-5 dropdown-toggle" data-toggle="dropdown">Account
-              <b class="caret"></b>
-            </a>
+      <div class="setting">
+        <div class="nav nav pull-right settings-img">
+            <div class= "dropdown-toggle" data-toggle="dropdown"><%= image_tag('/assets/wrench.svg', :class => "settings-img") %>
+            </div>
+         
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>              
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>           
                 <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
               </ul>
-          </li>
+            </div>
       <% else %>
             <%= link_to "Sign in", signin_path %>
             <%= link_to "Sign up", new_user_path %>
       <% end %>
-        </ul>
+        </div>
     </div>
   </div>
 </div>
