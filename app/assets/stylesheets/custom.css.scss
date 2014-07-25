@@ -61,9 +61,15 @@ width: 20%;
     line-height: 1.2;
   }
 }
-.custom-full-wide-buttons {
+.button-style {
   width: 60%;
-  margin: 0 auto; 
+  margin: 0 auto;
+  margin-top: 8%;
+}
+.wide-buttons-space-break {
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom: 8%;
+  margin-top: 4%;
   background-color: #aaa;
-  font-size: 100%;
 }

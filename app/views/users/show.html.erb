@@ -1,6 +1,19 @@
 <div class="col-xs-12">
-	<div class="">
-	<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
-		<%= link_to "Find/Edit Patron", 'current_user/patron_list', class: "custom-full-wide-buttons" %>
+	<div class="wide-buttons">
+		<%= link_to 'Add Patron', 'current_user/patrons', :class => 'btn btn-default btn-large btn-block button-style' %>
+	</div>
+
+	<div class="wide-buttons">
+		<%= link_to 'Create Notification', 'current_user/patron_list', :class => 'btn btn-default btn-large btn-block button-style' %>
+	<div class="wide-buttons-space-break">
+		<div class="wide-buttons">
+			<%= link_to 'Find/Edit Patron', 'current_user/patron_list', :class => 'btn btn-default btn-large btn-block button-style' %>
+		</div>
+		<div class="wide-buttons">
+			<%= link_to 'Edit/Add Beer', 'current_user/patron_list', :class => 'btn btn-default btn-large btn-block button-style' %>
+		</div>
+		<div class="wide-buttons">
+			<%= link_to 'Past Notifications', 'current_user/patron_list', :class => 'btn btn-default btn-large btn-block button-style' %>
+		</div>
 	</div>
 </div>

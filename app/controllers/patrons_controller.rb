@@ -1,6 +1,7 @@
 class PatronsController < ApplicationController
   def index
-  	@patrons = Patron.all
+  	@user = User.find(current_user)
+    @patrons = @user.patrons
   end
 
   def show
