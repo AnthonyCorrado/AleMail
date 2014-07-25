@@ -1,4 +1,6 @@
-<label>
+<div class="col-xs-2">
+</div>
+<div class="col-xs-8">
   <%= bootstrap_form_for(@user) do |f| %>
     <%= f.text_field :bar_name  %>
     <%= f.text_field :username  %>
@@ -13,4 +15,7 @@
     <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
   <% end %>
-</label>
+</div>
+<div class="col-xs-2">
+</div>
+

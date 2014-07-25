@@ -1,0 +1,18 @@
+<div class="my-fluid-container">  
+  <div class="col-xs-2"><br>
+  </div>
+  <div class="col-xs-8">
+    <%= bootstrap_form_for(@patron) do |f| %>
+      <div style="text-align:left"><%= f.text_field :first_name  %></div>
+      <div><%= f.text_field :last_name  %></div>
+      <label><input type="checkbox" name="colorCheckbox" value="phone">Text updates</label>  
+      <div class="phone hidden-phone-field"><%= f.text_field :phone %></div>
+      <label><input type="checkbox" name="colorCheckbox" value="email">Email updates</label> 
+      <div class="email hidden-email-field"><%= f.text_field :email %></div><br />
+
+      <div><%= f.submit "Create Patron", class: "btn btn-large btn-primary" %></div>
+      <% end %>
+  </div>
+  <div class="col-xs-2"><br>
+  </div>
+</div>

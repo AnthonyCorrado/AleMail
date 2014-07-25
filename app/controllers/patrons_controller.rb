@@ -2,6 +2,7 @@ class PatronsController < ApplicationController
   def index
   	@user = User.find(current_user)
     @patrons = @user.patrons
+    
   end
 
   def show
@@ -13,7 +14,15 @@ class PatronsController < ApplicationController
   end
 
   def create
-  	@patron = 
-  	@patron.save
+  	@patron = Patron.new(patron_params)
+  	  if @patron.save
+        redirect_to user_path(current_user)
+      else
+        render 'new'
+      end
+  end
+
+  def patron_params
+    params.require(:patron).permit(:last_name, :first_name, :phone, :email)
   end
 end

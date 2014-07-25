@@ -6,6 +6,19 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).attr("value")=="phone"){
+                $(".hidden-phone-field").toggle();
+            }
+            if($(this).attr("value")=="email"){
+                $(".hidden-email-field").toggle();
+            }
+        });
+    });
+</script>
+
 </head>
 <body>
 	
