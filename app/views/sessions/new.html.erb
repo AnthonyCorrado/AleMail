@@ -1,5 +1,6 @@
-<h1>Sign in</h1>
-<label>
+
+<div class="my-fluid-container">
+	<h1>Sign in</h1>
 		<%= bootstrap_form_for(:session, url: sessions_path) do |f| %>
 	    <%= f.text_field :username  %>
 	    <%= f.text_field :email %>
@@ -7,4 +8,4 @@
 
 	    <%= f.submit "Sign in", class: "btn btn-large btm-primary" %>
     <% end %>
-</label>
+</div>

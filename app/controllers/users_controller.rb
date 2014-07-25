@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 	end
 
 	def patron_list
-		@patrons = Patron.all.order("id DESC")
+		@patrons = Patron.all.order("id DESC")	
 	end
 
 	def new
