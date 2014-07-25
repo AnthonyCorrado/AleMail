@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :users
   resources :beers
   resources :my_beer_lists
   resources :notifications
   resources :patrons
+
+  resources :users do
+    resources :patrons
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup',  to: 'users#new',            via: 'get'
@@ -17,7 +20,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get 'users/:id/patron_list' => 'users#patron_list'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

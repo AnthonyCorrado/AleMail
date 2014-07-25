@@ -4,11 +4,17 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+
 	end
 
 	def show
 		@user = User.find(params[:id])
-		@patrons = @user.patrons
+		@patrons = Patron.all
+		patron_list
+	end
+
+	def patron_list
+		@patrons = Patron.all
 	end
 
 	def new

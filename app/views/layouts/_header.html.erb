@@ -2,7 +2,7 @@
   <h1><a href="#"></a></h1>
   <div class="navbar">
     <div class="navbar-inner">
-  <%= link_to image_tag('/assets/home.svg', :class => "home-img"), user_path %>
+  <%= link_to image_tag('/assets/home.svg', :class => "home-img"), user_path(current_user) %>
       <% if signed_in? %>
       <div class="setting">
         <div class="nav nav pull-right settings-img">

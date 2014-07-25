@@ -1,19 +1,6 @@
-<h4><%= @user.bar_name %></h4>
-<h4><%= @user.username %></h4>
-
-<h5><%= @user.phone %></h5>
-<h5><%= @user.address %></h5>
-
 <div class="col-xs-12">
-	<h5><% @patrons.each do |p| %>
-				<div class="patron-list">
-					<%= p.first_name %>
-					<%= p.last_name %>
-					<%= p.text_updates %>
-					<%= p.email_updates %>
-					<%= p.phone %>
-					<%= p.email %>
-				</div>
-				<button name="button" class="btn btn-default btn-responsive">Default</button>
-			<% end %>
+	<div class="">
+	<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+		<%= link_to "Find/Edit Patron", 'current_user/patron_list', class: "custom-full-wide-buttons" %>
+	</div>
 </div>
