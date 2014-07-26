@@ -1,0 +1,11 @@
+<div class="my-fluid-container">
+	<h1>Beer List</h1>
+	<% @beers.each do |b| %>
+		<%= link_to root_path do %>
+				<div class="beer-box">
+					<div><%= b.name %></div>
+					<div><%= b.style %></div>
+					<div class="line-break"></div>
+				</div>
+		<% end %>
+	<% end %>

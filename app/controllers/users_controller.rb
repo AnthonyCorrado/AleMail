@@ -17,6 +17,10 @@ class UsersController < ApplicationController
 		@patrons = Patron.all.order("id DESC")	
 	end
 
+	def beer_list
+		@beers = Beer.all.order("id DESC")	
+	end
+
 	def new
 		@user = User.new
 	end
