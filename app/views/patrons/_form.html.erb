@@ -10,9 +10,12 @@
       <label><input type="checkbox" name="colorCheckbox" value="email">Email updates</label> 
       <div class="email hidden-email-field"><%= f.text_field :email %></div><br />
       <%= f.hidden_field :user_id, :value => current_user.id %><br />
-
+      <% if @patron.first_name %>
+          <div><%= f.submit "Update Patron", class: "btn btn-large btn-primary" %></div>
+         <% else %>
       <div><%= f.submit "Create Patron", class: "btn btn-large btn-primary" %></div>
       <% end %>
+    <% end %>
   </div>
   <div class="col-xs-2"><br>
   </div>
