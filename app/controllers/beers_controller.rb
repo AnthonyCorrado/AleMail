@@ -1,5 +1,4 @@
 class BeersController < ApplicationController
-
   def index
   	@user = User.find(current_user)
     @beers = @user.beers
@@ -10,11 +9,24 @@ class BeersController < ApplicationController
   end
 
   def create
-  	@beers = Beer.new(beer_params)
-  	if @beers.save
+  	@beer = Beer.new(beer_params)
+  	if @beer.save
   		redirect_to user_path(current_user)
   	else
   		render 'new'
+  	end
+  end
+
+  def edit
+  	@beer = Beer.find(params[:id])
+  end
+
+  def update
+  	@beer = Beer.find(params[:id])
+  	if @beer.update(beer_params)
+  		redirect_to user_path(current_user)
+  	else
+  		render 'edit'
   	end
   end
 
@@ -22,4 +34,3 @@ class BeersController < ApplicationController
   	params.require(:beer).permit(:name, :brewery, :style, :comments, :brewery_location)
   end
 end
-

@@ -2,11 +2,15 @@
 	<div class="col-xs-2">
 	</div>
 	<div class="col-xs-8">
-		<%= bootstrap_form_for(@beers) do |f| %>
+		<%= bootstrap_form_for(@beer) do |f| %>
 		<div><%= f.text_field :name %></div>
 		<div><%= f.text_field :brewery %></div>
 		<div><%= f.text_field :style %></div>
 		<div><%= f.text_area :comments %></div>
 		<div><%= f.text_field :brewery_location %></div>
-		<div><%= f.submit "Create Beer", class: "btn btn-large btn-primary" %></div>
+				 <% if @beer	%>
+						<div><%= f.submit "Update Beer", class: "btn btn-large btn-primary" %></div>
+				 <% else %>
+						<div><%= f.submit "Create Beer", class: "btn btn-large btn-primary" %></div>
+						<% end %>
 		<% end %>

@@ -6,7 +6,7 @@
 		<div class="line-break"></div>
 	<% end %>
 		<% @beers.each do |b| %>
-			<%= link_to root_path do %>
+			<%= link_to edit_beer_path(b.id) do %>
 					<div class="beer-box box-font">
 						<div><%= b.name %></div>
 						<div><%= b.style %></div>
