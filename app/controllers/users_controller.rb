@@ -14,11 +14,15 @@ class UsersController < ApplicationController
 	end
 
 	def patron_list
-		@patrons = Patron.all.order("id DESC")	
+		@user = current_user
+		@patrons = @user.patrons
+		@patrons = @patrons.order("id DESC")
 	end
 
 	def beer_list
-		@beers = Beer.all.order("id DESC")	
+		@user = current_user
+		@beers = @user.beers
+		@beers = @beers.order("id DESC")	
 	end
 
 	def new

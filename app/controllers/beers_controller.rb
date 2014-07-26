@@ -5,7 +5,7 @@ class BeersController < ApplicationController
   end
 
   def new
-  	@beers = Beer.new
+  	@beer = Beer.new
   end
 
   def create
@@ -24,13 +24,13 @@ class BeersController < ApplicationController
   def update
   	@beer = Beer.find(params[:id])
   	if @beer.update(beer_params)
-  		redirect_to user_path(current_user)
+  		redirect_to url_for(:controller => :users, :action => :beer_list)
   	else
   		render 'edit'
   	end
   end
 
   def beer_params
-  	params.require(:beer).permit(:name, :brewery, :style, :comments, :brewery_location)
+  	params.require(:beer).permit(:name, :brewery, :style, :comments, :brewery_location, :user_id)
   end
 end

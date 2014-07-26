@@ -21,7 +21,20 @@ class PatronsController < ApplicationController
       end
   end
 
+  def edit
+    @patron = Patron.find(params[:id])
+  end
+
+  def update
+    @patron = Patron.find(params[:id])
+    if @patron.update(patron_params)
+      redirect_to url_for(:controller => :users, :action => :patron_list)
+    else
+      render 'edit'
+    end
+  end
+
   def patron_params
-    params.require(:patron).permit(:last_name, :first_name, :phone, :email)
+    params.require(:patron).permit(:last_name, :first_name, :phone, :email, :user_id)
   end
 end

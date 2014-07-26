@@ -8,9 +8,12 @@
 		<div><%= f.text_field :style %></div>
 		<div><%= f.text_area :comments %></div>
 		<div><%= f.text_field :brewery_location %></div>
-				 <% if @beer	%>
+				 <%= f.hidden_field :user_id, :value => current_user.id %><br />
+				 <% if @beer.name %>
 						<div><%= f.submit "Update Beer", class: "btn btn-large btn-primary" %></div>
 				 <% else %>
 						<div><%= f.submit "Create Beer", class: "btn btn-large btn-primary" %></div>
 						<% end %>
 		<% end %>
+	</div>
+</div>
