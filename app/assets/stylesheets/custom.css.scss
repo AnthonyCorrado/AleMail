@@ -8,10 +8,12 @@ html {
 
 body {
   padding-top: 20px;
-  background-image: url('/assets/graphite2.jpg');
-  background-repeat:repeat;
+  background-repeat: no-repeat;
   background-position: right top;
-  background-color: #ccc;
+  background: -webkit-linear-gradient(#FFFFFF, #FFB533, #FFB533); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FFFFFF, #FFB533, #FFB533); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FFFFFF, #FFB533, #FFB533); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FFFFFF, #FFB533, #FFB533); /* Standard syntax */
 }
 
 section {
@@ -95,7 +97,8 @@ width: 20%;
   display: none;
 }
 .beer-box {
-  background-color: #bbb;
+  background-color: #FFF;
+  border: 2px solid orange;
 }
 .line-break {
   width: 103%;
@@ -107,6 +110,10 @@ width: 20%;
   padding-left: 3%;
   font-size: 30px;
   line-height: 40px;
+  font-family: Helvetica;
+}
+.box-font:hover {
+  text-decoration: none;
 }
 .box-filler {
   padding: 0.5em 3%;
