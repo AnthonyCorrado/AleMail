@@ -25,6 +25,12 @@ class UsersController < ApplicationController
 		@beers = @beers.order("id DESC")	
 	end
 
+	def notification_list
+		@user =current_user
+		@notifications = @user.notifications
+		@notifications = @notifications.order("id DESC")
+	end
+
 	def new
 		@user = User.new
 	end

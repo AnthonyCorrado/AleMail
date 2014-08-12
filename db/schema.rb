@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140722060008) do
     t.integer  "beer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "integer"
   end
 
   create_table "notifications", force: true do |t|

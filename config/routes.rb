@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :patrons
     resources :beers
+    resources :notifications
   end
 
   resources :sessions, only: [:new, :create, :destroy]
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   get 'users/:id/patron_list' => 'users#patron_list'
   get 'users/:id/beer_list' => 'users#beer_list'
   get 'users/:id/beer_list' => 'users#beer_list'
+  get 'users/:id/notification_list' => 'users#notification_list'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

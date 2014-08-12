@@ -1,6 +1,10 @@
 <div class="my-fluid-container">
 	<div>
 	<h1>Patron List</h1>
+		<%= link_to new_patron_path do %>
+			<div class="beer-box box-font box-filler">Add New Patron</div>
+			<div class="line-break"></div>
+		<% end %>
 		<% @patrons.each do |p| %>
 			<%= link_to edit_patron_path(p.id) do %>
 					<div class="beer-box box-font">
