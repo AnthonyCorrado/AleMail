@@ -12,15 +12,24 @@ class NotificationsController < ApplicationController
     @notification = Notification.new
   	@user = User.find(current_user)
     @beer = @user.beers
+
   end
 
   def create
+    @patron = Patron.last
+    text_updates(@patron)
   	@notification = Notification.new(notification_params)
   	if @notification.save
   		redirect_to user_path(current_user)
   	else
   		render 'new'
   	end
+  end
+
+  def text_updates(patron)
+    if @patron.phone != ""
+      @test = patron + "test 1"
+    end
   end
 
   private
