@@ -10,19 +10,25 @@ class PatronsController < ApplicationController
 
   def new
   	@patron = Patron.new
+    @user = User.find(current_user)
+    @my_beer_list = MyBeerList.new
+    @beer = @user.beers
   end
 
   def create
-  	@patron = Patron.new(patron_params)
-  	  if @patron.save
-        redirect_to user_path(current_user)
-      else
-        render 'new'
-      end
+    # @my_beer_list = MyBeerList.new(my_beer_lists_params)
+    @patron = Patron.new(patron_params)
+    @my_beer_list = @patron.my_beer_lists
+    if @patron.save
+      redirect_to user_path(current_user)
+    else
+      render 'new'
+    end
   end
 
   def edit
     @patron = Patron.find(params[:id])
+    @beer = @patron.beers
   end
 
   def update
@@ -34,7 +40,29 @@ class PatronsController < ApplicationController
     end
   end
 
+  #  def new
+  #   @my_beer_list = MyBeerList.new
+  #   @patron = User.find(current_user.patrons)
+  # end
+
+  # def create
+  #   @my_beer_list = MyBeerList.new(my_beer_lists_params)
+  #   if @my_beer_list.save
+  #     redirect_to user_path(current_user)
+  #   else
+  #     render 'new'
+  #   end
+  # end
+
+
+  private
+
+
   def patron_params
-    params.require(:patron).permit(:last_name, :first_name, :phone, :email, :user_id)
+    params.require(:patron).permit(:last_name, :first_name, :phone, :email, :user_id, :beer_id, :beer_id_two, :beer_id_three)
+  end
+
+  def my_beer_lists_params
+    params.require(:my_beer_list).permit(:patron_id, :beer_id,)
   end
 end

@@ -12,7 +12,6 @@ class NotificationsController < ApplicationController
     @notification = Notification.new
   	@user = User.find(current_user)
     @beer = @user.beers
-
   end
 
   def create
