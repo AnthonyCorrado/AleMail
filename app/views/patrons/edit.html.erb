@@ -10,9 +10,9 @@
       <div class="beer-selected-three"><%= f.collection_select :beer_id_three, current_user.beers, :id, :name, {:include_blank => ""}, {:id => "beer_choice_three"} %></div>
       <div><%= f.text_field :first_name %></div>
       <div><%= f.text_field :last_name %></div>
-      <label><input type="checkbox" name="colorCheckbox" value="phone">Text updates</label>  
+      <label><input type="checkbox" name="phoneCheckbox" value="phone">Text updates</label>  
       <div class="phone hidden-phone-field"><%= f.text_field :phone %></div>
-      <label><input type="checkbox" name="colorCheckbox" value="email">Email updates</label>
+      <label><input type="checkbox" name="emailCheckbox" value="email">Email updates</label>
       <div class="email hidden-email-field"><%= f.text_field :email %></div><br />
       <%= f.hidden_field :user_id, :value => current_user.id %><br />
       <% if @patron.first_name %>
