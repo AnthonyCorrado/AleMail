@@ -3,10 +3,10 @@
   <div class="navbar box-shadowed">
     <div class="navbar-inner">
       <% if signed_in? %>
-        <%= link_to image_tag('/assets/home.svg', :class => "home-img"), user_path(current_user) %>
+        <%= link_to image_tag('/assets/home.png', :class => "home-img"), user_path(current_user) %>
       <div class="setting">
         <div class="nav nav pull-right settings-img">
-            <div class= "dropdown-toggle" data-toggle="dropdown"><%= image_tag('/assets/wrench.svg', :class => "settings-img") %>
+            <div class= "dropdown-toggle" data-toggle="dropdown"><%= image_tag('/assets/settings.png', :class => "settings-img") %>
             </div>
          
               <ul class="dropdown-menu">              
