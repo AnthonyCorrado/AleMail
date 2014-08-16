@@ -2,6 +2,7 @@
   <div class="col-xs-2"><br>
   </div>
   <div class="col-xs-8">
+    <div class="main-info-container">
     <%= bootstrap_form_for(@patron) do |f| %>
 
       <div><%= f.collection_select :beer_id, @beer, :id, :name, {:include_blank => ""}, {:id => "beer_choice_one" } %></div>
@@ -21,6 +22,7 @@
       <div><%= f.submit "Create Patron", class: "btn btn-large btn-primary" %></div>
       <% end %>
     <% end %>
+  </div>
   </div>
   <div class="col-xs-2"><br>
   </div>

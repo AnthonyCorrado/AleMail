@@ -9,13 +9,12 @@
             <div class= "dropdown-toggle" data-toggle="dropdown"><%= image_tag('/assets/settings.png', :class => "settings-img") %>
             </div>
               <ul class="dropdown-menu">              
-                <li><%= link_to "Profile Settings", edit_user_path(current_user) %></li>           
-                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                <li><%= link_to "Profile Settings", edit_user_path(current_user), :id => "setting-text" %></li>           
+                <li><%= link_to "Sign out", signout_path, method: "delete", :id => "setting-text" %></li>
               </ul>
             </div>
       <% else %>
-            <%= link_to "Sign in", signin_path %>
-            <%= link_to "Sign up", new_user_path %>
+            <%= root_path %>
       <% end %>
         </div>
     </div>

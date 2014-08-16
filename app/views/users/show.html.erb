@@ -1,41 +1,53 @@
 <div class="col-xs-12">
-	<div class="iconbox-beer"></div>
 
-		<div class="custom-button">
-			<%= link_to 'current_user/patrons/new' do %>
+	<div class="custom-button">
+		<%= link_to 'current_user/patrons/new' do %>
+			<div class="active-button">
 				<div class="icon-patron-new"></div>
 				<div class="button-text">Create Patron</div>
-			<% end %>
-		</div>
-		<br />
-		<div class="custom-button">
-			<%= link_to 'current_user/notifications/new' do %>
+			</div>
+		<% end %>
+	</div>
+		
+	<br />
+	<div class="custom-button">
+		<%= link_to 'current_user/notifications/new' do %>
+			<div class="active-button">
 				<div class="icon-notification"></div>
 				<div class="button-text">Create Notification</div>
-			<% end %>
-		</div>
+			</div>
+		<% end %>
+	</div>
 
 	<div class="wide-buttons-space-break">
 
-		<div class="custom-button dark-button">
-			<%= link_to 'current_user/patron_list' do %>	
+	<div class="custom-button dark-button">
+		<%= link_to 'current_user/patron_list' do %>	
+			<div class="active-button">
 				<div class="icon-patron"></div>
 				<div class="button-text">Find/Edit Patron</div>
-			<% end %>
-		</div>
+			</div>
+		<% end %>
+	</div>
 		<br />
-			<div class="custom-button dark-button">
-				<%= link_to 'current_user/beer_list' do %>
+
+		<div class="custom-button dark-button">
+			<%= link_to 'current_user/beer_list' do %>
+				<div class="active-button">
 					<div class="icon-beer"></div>
 					<div class="button-text">Add/Edit Beer</div>
-				<% end %>
+				</div>
+			<% end %>
 			</div>
 		<br />
-			<div class="custom-button dark-button">
-				<%= link_to 'current_user/notification_list' do %>
+
+		<div class="custom-button dark-button">
+			<%= link_to 'current_user/notification_list' do %>
+				<div class="active-button">
 					<div class="icon-past-notification"></div>
 					<div class="button-text">Past Notifications</div>
-				<% end %>		
+				</div>
+			<% end %>		
 			</div>
 		<br />
 

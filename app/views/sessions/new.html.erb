@@ -1,10 +1,12 @@
 <div class="my-fluid-container">
-	<h1>Sign in</h1>
+	<div class="main-info-container">
+	<h1 class="heading-text">Sign in</h1>
 		<%= bootstrap_form_for(:session, url: sessions_path) do |f| %>
 	    <%= f.text_field :username  %>
 	    <%= f.text_field :email %>
 	    <%= f.password_field :password %>
 
-	    <%= f.submit "Sign in", class: "btn btn-large btm-primary" %>
+	    <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
+  </div>
 </div>

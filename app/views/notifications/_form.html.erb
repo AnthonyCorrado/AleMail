@@ -1,9 +1,12 @@
-<div><%= bootstrap_form_for(@notification) do |f| %>
-	<%= f.collection_select :beer_id, @beer, :id, :name %>
-	<%= f.text_area :message_content %>
 
-	<%= f.hidden_field :user_id, :value => current_user.id %><br />
-	<%#= f.hidden_field :beer_id, :value => @beer.last.id %><br />
-	<%= f.submit "Create Notification", class: "btn btn-large btn-primary" %>
-	<% end %>
+<div class="main-info-container">
+	<div><%= bootstrap_form_for(@notification) do |f| %>
+		<%= f.collection_select :beer_id, @beer, :id, :name %>
+		<%= f.text_area :message_content %>
+
+		<%= f.hidden_field :user_id, :value => current_user.id %><br />
+		<%#= f.hidden_field :beer_id, :value => @beer.last.id %><br />
+		<%= f.submit "Create Notification", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
 </div>

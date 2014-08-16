@@ -1,23 +1,27 @@
 <div class="my-fluid-container">
-    <div class="col-xs-2">
-    </div>
-    <div class="col-xs-8">
+  <div class="col-xs-2">
+  </div>
+  <div class="col-xs-8">
+    <div class="main-info-container">
       <div><%= bootstrap_form_for(@user) do |f| %><div>
-      <div>  <%= f.text_field :bar_name  %></div>
-      <div>  <%= f.text_field :username  %></div>
-      <div>  <%= f.text_field :email %></div>
-      <div>  <%= f.text_field :address %></div>
-      <div>  <%= f.text_field :phone %></div>
-      <div>  <%= f.password_field :password %></div>
-      <div>  <%= f.password_field :password_confirmation %></div>
-         <% if signed_in? %>
-      <div>  <%= f.submit "Update info", class: "btn btn-large btn-primary" %></div>
+        <div>  <%= f.text_field :bar_name  %></div>
+        <div>  <%= f.text_field :username  %></div>
+        <div>  <%= f.text_field :email %></div>
+        <div>  <%= f.text_field :address %></div>
+        <div>  <%= f.text_field :phone %></div>
+        <div>  <%= f.password_field :password %></div>
+        <div>  <%= f.password_field :password_confirmation %></div>
+        <% if signed_in? %>
+        <div>  <%= f.submit "Update info", class: "btn btn-large btn-primary" %></div>
         <% else %>
-      <div>  <%= f.submit "Create my account", class: "btn btn-large btn-primary" %></div>
+        <div>  <%= f.submit "Create my account", class: "btn btn-large btn-primary" %></div>
         <% end %>
-      <% end %>
+        <% end %>
+      </div>
+      <div class="col-xs-2">
+      </div>
+      </div>
     </div>
-    <div class="col-xs-2">
-    </div>
+  </div>
 </div>
 
