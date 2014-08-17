@@ -19,23 +19,27 @@ class NotificationsController < ApplicationController
   	@notification = Notification.new(notification_params)
     @patrons = Patron.all
     @patrons = @patrons.where(beer_id: @notification.beer_id)
-    text_updates(@patrons, @notification.message_content)
-    # text_updates(@notification)
+    @user = User.find(current_user).bar_name
+    @beer = Beer.find(@notification.beer_id).name
   	if @notification.save
+      text_updates(@patrons, @user, @beer, @notification.message_content)
+      @patrons.each do |p|
+        UserMailer.notification_email(p, @user, @beer, @notification.message_content)
+      end
   		redirect_to user_path(current_user)
   	else
   		render 'new'
   	end
   end
 
-  def text_updates(patrons, message_content)
+  def text_updates(patrons, bar, beer, message_content)
     @client = Twilio::REST::Client.new ENV['TWILIO_ID'], ENV['TWILIO_SECRET']
     patrons.each do |p|
       if p.phone != "" 
         @client.account.messages.create({
           :from => ENV['TWILIO_PHONE'], 
           :to => "#{p.phone}",
-          :body => "Message: #{message_content}"
+          :body => "Greetings from #{bar}! #{beer} is back in stock. #{message_content}"
           })
         puts p.phone
       end
