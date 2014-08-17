@@ -33,8 +33,8 @@ class NotificationsController < ApplicationController
     patrons.each do |p|
       if p.phone != "" 
         @client.account.messages.create({
-          :from => 
-          :to => 
+          :from => ENV['TWILIO_PHONE'], 
+          :to => "#{p.phone}",
           :body => "Message: #{message_content}"
           })
         puts p.phone
