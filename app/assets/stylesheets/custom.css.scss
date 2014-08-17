@@ -110,8 +110,10 @@ width: 20%;
   display: none;
 }
 .beer-box {
-  background-color: #FFF;
-  border: 2px solid orange;
+  background: url(woodBG.jpg);
+  border: 2px solid #5d8ab9;
+  border-radius: 5px;
+  text-align: center;
 }
 .line-break {
   width: 103%;
@@ -168,7 +170,7 @@ width: 20%;
 }
 a {
   font-size: 2.5em;
-  color: #d8d8d8;
+  color: #ddd;
   text-align: left;
 }
 a:hover {
@@ -284,13 +286,16 @@ ul.dropdown-menu {
 .large-info {
   width: 90%;
 }
+.medium-info {
+  width: 70%;
+}
 label {
   font-size: 1.1em;
   line-height: 1.5;
   color: white;
 }
 .heading-text {
-  color: #d8d8d8;
+  color: #ddd;
 }
 .standard-text {
   color: #fff;
@@ -317,7 +322,22 @@ table {
 }
 .past-note-heading {
   font-size: 2em;
-  color: #ccc;
+  color: #ddd;
   text-align: center;
   padding: 10px 0 20px 0;
+}
+.names {
+  width: 90%;
+  padding: 15px;
+  display: inline-block;
+  background: url(darkwoodBG.jpg);
+  border: 2px solid #5d8ab9;
+  border-radius: 5px;
+}
+.beer-names {
+  font-size: 0.7em;
+}
+.subcat {
+  font-size: 1em;
+  float: right;
 }

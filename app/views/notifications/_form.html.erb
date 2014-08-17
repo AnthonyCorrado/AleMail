@@ -1,7 +1,7 @@
 
 <div class="main-info-container">
 	<div><%= bootstrap_form_for(@notification) do |f| %>
-		<%= f.collection_select :beer_id, @beer, :id, :name %>
+		<%= f.collection_select :beer_id, @beer, :id, :name, {:include_blank => ""} %>
 		<%= f.text_area :message_content %>
 
 		<%= f.hidden_field :user_id, :value => current_user.id %><br />

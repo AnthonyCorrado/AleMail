@@ -1,20 +1,20 @@
 <div class="my-fluid-container">
-	<div>
-	<h1>Beer List</h1>
-	<%= link_to new_beer_path do %>
+	<div class="main-info-container large-info">
+		<h1  class="past-note-heading">Beer List</h1>
+		<%= link_to new_beer_path do %>
 		<div class="beer-box box-font box-filler">Add New Beer</div>
-		<div class="line-break"></div>
-	<% end %>
+		<% end %>
+		<br />
 		<% @beers.each do |b| %>
-			<%= link_to edit_beer_path(b.id) do %>
-					<div class="beer-box box-font">
-						<div><%= b.name %></div>
-						<div><%= b.style %></div>
-						<div class="line-break"></div>
-					</div>
-			<% end %>
+		<%= link_to edit_beer_path(b.id) do %>
+		<div class="box-font">
+			<div class="names beer-names"><%= b.name %> &nbsp; <span class='subcat'><%= b.style %><span></div>
+		</div>
+		<br />
+		<% end %>
 		<% end %>
 	</div>
+</div>
 </div>
 
  

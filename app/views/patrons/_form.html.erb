@@ -9,8 +9,8 @@
 
       <div class="beer-select-two"><%= f.collection_select :beer_id_two, @beer, :id, :name, {:include_blank => ""}, {:id => "beer_choice_two" } %></div>
       <div class="beer-select-three"><%= f.collection_select :beer_id_three, @beer, :id, :name, {:include_blank => ""}, {:id => "beer_choice_three"} %></div>
-      <div><%= f.text_field :first_name %></div>
-      <div><%= f.text_field :last_name %></div>
+      <div><%= f.text_field :first_name, :placeholder => 'required' %></div>
+      <div><%= f.text_field :last_name, :placeholder => 'required' %></div>
       <label><input type="checkbox" name="colorCheckbox" value="phone">Text updates</label>  
       <div class="phone hidden-phone-field"><%= f.text_field :phone %></div>
       <label><input type="checkbox" name="colorCheckbox" value="email">Email updates</label>

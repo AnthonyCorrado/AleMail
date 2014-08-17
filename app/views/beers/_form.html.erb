@@ -3,9 +3,9 @@
 	</div>
 	<div class="col-xs-8">
 		<%= bootstrap_form_for(@beer) do |f| %>
-		<div><%= f.text_field :name %></div>
+		<div><%= f.text_field :name, :placeholder => 'required' %></div>
 		<div><%= f.text_field :brewery %></div>
-		<div><%= f.text_field :style %></div>
+		<div><%= f.text_field :style, :placeholder => 'required' %></div>
 		<div><%= f.text_area :comments %></div>
 		<div><%= f.text_field :brewery_location %></div>
 				 <%= f.hidden_field :user_id, :value => current_user.id %><br />

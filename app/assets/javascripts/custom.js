@@ -28,11 +28,16 @@ jQuery(document).ready(function($){
 			});
 		}
 	});
-	if($('#beer_choice_two').val() === ""){
-		$('.beer-selected-two').css('display', 'none');
+	// beer fields become active if filled or next to be filled in edit page
+	if($('#beer_choice_one').val() === "") {
+		if($('#beer_choice_two').val() === ""){
+			$('.beer-selected-two').css('display', 'none');
+		}
 	}
-	if($('#beer_choice_three').val() === ""){
-		$('.beer-selected-three').css('display', 'none');
+	if($('#beer_choice_two').val() === "") {
+		if($('#beer_choice_three').val() === ""){
+			$('.beer-selected-three').css('display', 'none');
+		}
 	}
 });
 

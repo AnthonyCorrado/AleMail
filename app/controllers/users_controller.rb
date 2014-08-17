@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 	def patron_list
 		@user = current_user
 		@patrons = @user.patrons
-		@patrons = @patrons.order("id DESC")
+		@patrons = @patrons.order("first_name ASC")
 	end
 
 	def beer_list

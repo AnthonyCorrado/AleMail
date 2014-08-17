@@ -10,6 +10,8 @@ class Patron < ActiveRecord::Base
   validates :phone, presence: true, unless: ->(user){user.email.present?}
 	
 	before_save { self.email = email.downcase }
+	before_save { self.first_name = first_name.titleize }
+	before_save { self.last_name = last_name.titleize }
 
   
 end

@@ -1,18 +1,17 @@
 <div class="my-fluid-container">
-	<div>
-	<h1>Patron List</h1>
+	<div class="main-info-container medium-info">
+		<h1 class="past-note-heading">List Of Fine Patrons</h1>
 		<%= link_to new_patron_path do %>
-			<div class="beer-box box-font box-filler">Add New Patron</div>
-			<div class="line-break"></div>
+		<div class="beer-box box-font box-filler">Add New Patron</div>
 		<% end %>
+		<br />
 		<% @patrons.each do |p| %>
-			<%= link_to edit_patron_path(p.id) do %>
-					<div class="beer-box box-font">
-						<div><%= p.first_name %></div>
-						<div><%= p.last_name %></div>
-						<div class="line-break"></div>
-					</div>
-			<% end %>
+		<%= link_to edit_patron_path(p.id) do %>
+		<div class=" box-font">
+			<div class="names"><%= p.first_name %> &nbsp;<%= p.last_name %></div>
+		</div>
+		<br />
+		<% end %>
 		<% end %>
 	</div>
 </div>
