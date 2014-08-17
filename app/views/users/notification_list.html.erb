@@ -1,13 +1,19 @@
-<div class="main-info-container">
+<div class="main-info-container large-info">
 	<div class="past-note-heading">Past Notifications</div>
 	<div class="standard-text">
 	<span>
+		<div class="past-note-date">Date</div>
 		<div class="past-note-beer">Beer</div>
 		<div class="past-note-message">Message</div>
-	<span>
+	</span>
+	<br />
+	<br />
 		<% @notifications.each do |n| %>
+			<div class="past-note-date"><%= n.created_at.strftime("%m/%d/%Y") %></div>
 			<div class="past-note-beer"><%= @beers.find(n.beer_id).name %></div>
 			<div class="past-note-message"><%= n.message_content %></div>
+			<br />
+			<br />
 		<% end %>
 	</div>
 </div>
