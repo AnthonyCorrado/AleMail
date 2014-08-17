@@ -1,7 +1,14 @@
-Hello whoooooorld 
-<% @notifications.each do |n| %>
-<br />
-	<%= n.beer %>
-	<%= n.message_content %>
-<% end %>
+<div class="main-info-container">
+	<div class="past-note-heading">Past Notifications</div>
+	<div class="standard-text">
+	<span>
+		<div class="past-note-beer">Beer</div>
+		<div class="past-note-message">Message</div>
+	<span>
+		<% @notifications.each do |n| %>
+			<div class="past-note-beer"><%= @beers.find(n.beer_id).name %></div>
+			<div class="past-note-message"><%= n.message_content %></div>
+		<% end %>
+	</div>
+</div>
 

@@ -26,9 +26,10 @@ class UsersController < ApplicationController
 	end
 
 	def notification_list
-		@user =current_user
+		@user = current_user
 		@notifications = @user.notifications
 		@notifications = @notifications.order("id DESC")
+		@beers = Beer.all
 	end
 
 	def new

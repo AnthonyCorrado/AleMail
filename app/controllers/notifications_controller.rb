@@ -27,9 +27,6 @@ class NotificationsController < ApplicationController
   end
 
   def text_updates(patron)
-    if @patron.phone != ""
-      @test = patron + "test 1"
-    end
   end
 
   private

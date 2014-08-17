@@ -31,7 +31,7 @@ textarea {
   width: 70%;
   margin: 0 auto;
   padding: 10px 25px;
-  border: 3px solid #78a0d5;
+  border: 3px solid #5d8ab9;
   border-radius: 8px;
   box-shadow: -5px 5px 7px #000;
 }
@@ -278,7 +278,7 @@ ul.dropdown-menu {
   padding: 20px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, .4);
-  border: 3px solid #78a0d5;
+  border: 3px solid #5d8ab9;
   border-radius: 7px;
 }
 label {
@@ -288,4 +288,28 @@ label {
 }
 .heading-text {
   color: #a9a9a9;
+}
+.standard-text {
+  color: #fff;
+}
+span {
+
+}
+table {
+  width: 90%;
+  margin: 0 auto;
+}
+.past-note-beer {
+  width: 29%;
+  display: inline-block;
+}
+.past-note-message {
+  width: 70%;
+  display: inline-block;
+}
+.past-note-heading {
+  font-size: 2em;
+  color: #ccc;
+  text-align: center;
+  padding: 10px 0 20px 0;
 }
