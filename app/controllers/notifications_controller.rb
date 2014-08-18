@@ -24,7 +24,9 @@ class NotificationsController < ApplicationController
   	if @notification.save
       text_updates(@patrons, @user, @beer, @notification.message_content)
       @patrons.each do |p|
+        if p.email != ""
         UserMailer.notification_email(p, @user, @beer, @notification.message_content)
+        end
       end
   		redirect_to user_path(current_user)
   	else

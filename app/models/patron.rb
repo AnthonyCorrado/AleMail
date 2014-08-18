@@ -4,8 +4,9 @@ class Patron < ActiveRecord::Base
 	has_many :notifications
 	has_many :beers
 
-
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	validates_length_of :phone, :is => 10, allow_nil: true, allow_blank: true
+	validates_format_of :email, with: /[a-zA-Z0-9]\@[a-zA-Z]{2,}\.[a-zA-Z]{2,}/, allow_nil: true, allow_blank: true
+	# VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, unless: ->(user){user.phone.present?}
   # validates :phone, presence: true, unless: ->(user){user.email.present?}
 	
