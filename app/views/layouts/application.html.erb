@@ -5,17 +5,34 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Allan:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	
 	<%= render 'layouts/header' %>
   <br />
-	<div class="fluid-container">
-		<%= yield %>
-	</div>
-  <%= render 'layouts/footer' %>
+
+  <div class="browser-size-message">
+    <div class="custom-button">
+      <div class="active-button">
+        <div class="button-text"><h2 class"browser-size-text">This app is currently designed for use on standard-sized tablets. Please resize your browser or flip your device to portrait orientation</h2></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="browser-size-message-small">
+      <div class="custom-button">
+        <div class="active-button">
+          <div class="button-text"><h2 class"browser-size-text-small">This app is currently designed for use on standard-sized tablets. Please check back for the mobile version soon</h2></div>
+        </div>
+      </div>
+    </div>
+
+  	<div class="fluid-container">
+  		<%= yield %>
+  	</div>
+    <%= render 'layouts/footer' %>
 </body>
 </html>
