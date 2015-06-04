@@ -1,28 +1,16 @@
-== README
+## aleMail ** this is a now defunct version. Please checkout the redesigned app using AngularJs and Ionic Framework here: https://github.com/AnthonyCorrado/aC **
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A notification service used by bars to spread the joy of new or returning microbrews!
 
-Things you may want to cover:
+## Why and How
 
-* Ruby version
+You know the old love story...A patron falls for the Blonde IPA microbrew down at the local pub. Patron goes home and tells friends and family about meeting "The One." Said patron brings friends to bar the following weekend only to discover the soul crushing news that the heralded beer is not available at this time. Tragic.
 
-* System dependencies
+aleC wants to make this sad sob story a thing of the past. Bar managers and bartenders merely have to select the beer that is back on tap and aleC sends text or email notifications based on the patron's preferences. Bars increase repeat business. Patrons head to the bar for a few pints of their favorite brew with friends. Tragedy averted.
 
-* Configuration
+## What Was Used
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ruby on Rails with many a gem and tied into a PostgreSQL DB. Also, much Belching Beaver Peanut Butter Milk Stout beer which served as the inspiration for aleMail.
+## Contact
+If you have any feedback, comments, or questions, please reach out! Contact me through Github or via Gmail. The choice I leave up to you. Thanks in advance! 
+Anthony - anthonymcorrado@gmail.com
