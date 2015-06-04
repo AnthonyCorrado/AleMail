@@ -1,6 +1,7 @@
-## aleMail ** this is a now defunct version. Please checkout the redesigned app using AngularJs and Ionic Framework here: https://github.com/AnthonyCorrado/aC **
+## aleMail 
 
 A notification service used by bars to spread the joy of new or returning microbrews!
+** this is a now defunct version. Please checkout the redesigned app using AngularJs and Ionic Framework here: https://github.com/AnthonyCorrado/aC **
 
 ## Why and How
 
